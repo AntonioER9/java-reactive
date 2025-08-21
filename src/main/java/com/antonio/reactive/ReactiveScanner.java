@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class ReactiveScanner {
     public static void main(String[] args) {
 
-        PublishSubject<String> publishSubject = PublishSubject.create();
+        PublishSubject<String> publishSubject = PublishSubject.create(); //Observable
 
-        publishSubject.subscribe(
+        publishSubject.subscribe( //Observer que está suscrito al observable
                 item -> System.out.println("Received: " + item),
                 error -> System.out.println("Error: " + error.getMessage()),
                 () -> System.out.println("Done!")
