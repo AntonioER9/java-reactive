@@ -5,7 +5,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class Scheduler01 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Observable.just("hola")
                 .subscribeOn(Schedulers.io())
                 .doOnNext(s -> System.out.println("Hilo Map: "+ Thread.currentThread().getName()))
